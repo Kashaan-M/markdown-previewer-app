@@ -1,0 +1,31 @@
+.container-fluid {
+  background-color: steelblue;
+}
+
+#textarea-col {
+  height: 40vh;
+}
+.editor-bar {
+  background-color: tomato;
+}
+.fullscreen-arrows {
+  transition: all 0.1s ease-in-out;
+}
+.fullscreen-arrows:active {
+  transform: scale(80%);
+}
+textarea {
+  border: none;
+}
+#kashaan {
+  text-decoration: none;
+  color: #ffc107;
+  transition: all 0.2s ease-in-out;
+}
+#kashaan:active {
+  color: tomato;
+}
+#kashaan:hover {
+  border-bottom: 2px solid #e0af1c ;
+  color:#e0af1c;
+}
