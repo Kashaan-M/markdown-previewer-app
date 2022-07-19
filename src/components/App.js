@@ -7,7 +7,6 @@ export class App extends React.Component {
     this.initialMarkdown = this.initialMarkdown.bind(this);
     this.buildPreview = this.buildPreview.bind(this);
     this.editorFullscreen = this.editorFullscreen.bind(this);
-    this.previewFullscreen = this.previewFullscreen.bind(this);
   }
 
   componentDidMount() {
@@ -64,44 +63,33 @@ export class App extends React.Component {
     editor.classList.toggle("vh-100");
 
   }
-  previewFullscreen(e) {
-
-
-    // toggle the "vh-100" bootstrap class on the preview as the user clicks on the fullscreen arrow
-    
-
-    const preview = document.querySelector("#preview");
-    preview.classList.toggle("vh-100");
-  }
   render() {
     return (
      <main>
        <div className="container-fluid d-flex flex-column align-items-center">
-         <div className="row w-100">
+         <div className="row w-50">
            <div className="col text-center">
-             <h1 className="mt-5 fw-bolder text-white shadow-sm"><i className="bi bi-markdown-fill"></i> Markdown Previewer App</h1>
+             <h1 className="mt-5 fw-bolder text-white lh-lg border-bottom border-top rounded  border- 1 border-white"><i className="bi bi-markdown-fill"></i> Markdown Previewer App</h1>
            </div>
 
          </div>
-         <div className="row w-75 my-5 shadow">
+         <div className="row width-90 w-75 my-5 shadow">
            <div className="col border border-dark border-2 p-0 overflow-hidden" id="textarea-col">
-             <div className="editor-bar d-flex flex-row justify-content-between align-items-center w-100">
+             <div className="editor-bar d-flex flex-row justify-content-between align-items-center w-100 border-bottom border-2 border-dark">
                <p className="ms-3 my-2 fw-bold">Markdown Editor</p>
                <i onClick={this.editorFullscreen} className="bi bi-arrows-fullscreen me-3 my-2 fullscreen-arrows"></i>
              </div>
              <textarea name="" id="editor" className="w-100 h-100 p-2 overflow-scroll" onLoad={this.initialMarkdown} onKeyUp={this.buildPreview}></textarea>
            </div>
          </div>
-         <div className="row w-75 shadow mt-5">
+         <div className="row width-90 w-75 shadow mt-5">
            <div className="col border border-dark border-2 p-0">
-             <div className="d-flex flex-row justify-content-between align-items-center bg-info w-100 h-auto">
+             <div className="d-flex flex-row justify-content-between align-items-center bg-info w-100 h-auto border-bottom border-2 border-dark">
                <p className="ms-3 my-2 fw-bold">Markdown Preview</p>
-               <i onClick={this.previewFullscreen} className="bi bi-arrows-fullscreen me-3 my-2 fullscreen-arrows"></i>
-             </div> 
+             </div>
              <div id="preview" className="w-100 h-auto p-2 ps-3 bg-body"></div>
-           </div>
+           </div> 
          </div>
-          
         <p className="h5 mt-5">Developed by <a href="https://kashaan.netlify.app" id="kashaan" className="fw-bold"> Kashaan Mahmood <i className="bi bi-arrow-up-right-square-fill "></i></a></p>
        </div>
      </main> 

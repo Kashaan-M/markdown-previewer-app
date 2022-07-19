@@ -29,3 +29,8 @@ textarea {
   border-bottom: 2px solid #e0af1c ;
   color:#e0af1c;
 }
+@media (max-width: 576px) {
+  .width-90 {
+    width: 90% !important;
+  }
+}
