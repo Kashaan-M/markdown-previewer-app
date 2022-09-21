@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./main.scss";
-import { App } from "./components/App";
+// import { App } from "./components/App";
+import App from "./components/AppWithReactHooks";
 
 const app = ReactDOM.createRoot(document.getElementById("app"));
 app.render(<App />);
